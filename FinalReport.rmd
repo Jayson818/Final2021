@@ -61,7 +61,7 @@ In the second plot, the one above, The The left two bars of the graph are all th
 
 The codes that  create this plot start with the code block beginning with dd2. dd2 can be seen in the environment pane and if inspected contains 4 variables.These variables include infected, treatment, count, and prcent(stands for percent). The second group of codes is called the basicC. BasicC can also be seen in the environment pane and appears to contain a list of 9 variables. This information creates the first plot. The basicCC is the last bunch of codes and is also in the files pane. It also contains 9 variables and helps to create the percentage plot, the second plot.
 
-### Numerical results
+### Numerical Results
 
 ```{r}
 table1 <- xtabs(~infected + treatment, data=guy)
@@ -72,7 +72,7 @@ These numerical results show specific percentages of guys(men) that got covid-19
 Among the guys, 58% got covid-19 after taking the vaccine, while the approximately 42% of guys that were given the placebo contracted covid-19. The vaccine is clearly not effective in preventing covid-19 in guys(males) and it is not recommended. Those who took the placebo were much less likely to contact covid-19
 The odds of getting covid-19 while taking the vaccine is 3:2. The men that took the drug were one and half times more likely to get covid-19 than those taking the placebo.
 
-### Inferential results
+### Inferential Results
 
 
 ```{r}
@@ -136,7 +136,7 @@ In the second plot, the one above, The The left two bars of the graph are all th
 
 The codes that  create this plot start with the code block beginning with dd2. dd2 can be seen in the environment pane and if inspected contains 4 variables.These variables include infected, treatment, count, and prcent(stands for percent). The second group of codes is called the basicC. BasicC can also be seen in the environment pane and appears to contain a list of 9 variables. This information creates the first plot. The basicCC is the last bunch of codes and is also in the files pane. It also contains 9 variables and helps to create the percentage plot, the second plot.
 
-## numerical results
+## Numerical Results
 
 ```{r}
 table1 <- xtabs(~infected + treatment, data=gal)
@@ -149,7 +149,7 @@ These numerical results show specific percentages of girls(females) that got cov
 Among the gals, 33% got covid-19 after taking the vaccine, while the approximately 67% of girls that were given the placebo contracted covid-19. The vaccine is clearly not effective in preventing covid-19 in girls(females) and it is not recommended. Those who took the placebo were much less likely to contact covid-19
 The odds of getting covid-19  for a woman while taking the vaccine is 1:2. The women that took the drug were half as likely to get covid-19 (33%) than those taking the placebo(67%).
 
-## inferential Results
+## Inferential Results
 
 ```{r}
 chisq.test(table1)
@@ -213,7 +213,7 @@ In was the second plot, the one above, The The left two bars of the graph are al
 
 The codes that  create this plot start with the code block beginning with dd2. dd2 can be seen in the environment pane and if inspected contains 4 variables.These variables include infected, treatment, count, and prcent(stands for percent). The second group of codes is called the basicC. BasicC can also be seen in the environment pane and appears to contain a list of 9 variables. This information creates the first plot. The basicCC is the last bunch of codes and is also in the files pane. It also contains 9 variables and helps to create the percentage plot, the second plot.
 
-### Numerical results
+### Numerical Results
 
 ```{r}
 table1 <- xtabs(~infected + treatment, data=Druguser)
@@ -223,7 +223,7 @@ colPerc(table1)
 These numerical results show specific percentages of Drugusers that got covid-19 after taking the placebo and taking the vaccine. Among the Drugusers, 33% got covid-19 after taking the vaccine, while the approximately 67% of drugusers that were given the placebo contracted covid-19. The vaccine is clearly effective in preventing covid-19 in drugusers and it is  recommended. Those who took the placebo were much more likely to contact covid-19
 The odds of getting covid-19  for a druguser while taking the vaccine is 1:2. The drugusers that took the drug were half as likely to get covid-19 (33%) than those taking the placebo(67%).
 
-## inferential Results
+## Inferential Results
 
 ```{r}
 chisq.test(table1)
@@ -287,7 +287,7 @@ In was the second plot, the one above, The The left two bars of the graph are al
 
 The codes that  create this plot start with the code block beginning with dd2. dd2 can be seen in the environment pane and if inspected contains 4 variables.These variables include infected, treatment, count, and prcent(stands for percent). The second group of codes is called the basicC. BasicC can also be seen in the environment pane and appears to contain a list of 9 variables. This information creates the first plot. The basicCC is the last bunch of codes and is also in the files pane. It also contains 9 variables and helps to create the percentage plot, the second plot.
 
-### Numerical results
+### Numerical Results
 
 ```{r}
 table1 <- xtabs(~infected + treatment, data=gay)
@@ -297,7 +297,7 @@ colPerc(table1)
 These numerical results show specific percentages of  LGBTQ that got covid-19 after taking the placebo and taking the vaccine. Among the  LGBTQ, 71% got covid-19 after taking the vaccine, while  approximately 29% of  LGBTQ that were given the placebo contracted covid-19. The vaccine is clearly ineffective in preventing covid-19 in  LGBTQ and it is not recommended for them. Those who took the placebo were much more likely to contact covid-19
 The odds of getting covid-19  while taking the vaccine is 3:1. The  LGBTQ that took the drug were much more likely to get covid-19 (71%) than those taking the placebo(29%).
 
-## inferential Results
+## Inferential Results
 
 ```{r}
 chisq.test(table1)
@@ -334,3 +334,16 @@ The odds ratio is approximately how effective the vaccine is. The odds ratio for
 
 # Conclusions and recommendations
 
+We reject the null hypothesis because there is a difference in covid 19 vaccine effectiveness among different subgroups(males, females, Drugusers, and LGBTQ). Vaccine effectiveness varies between subgroups and each subgroup had a difference P value, thus different rate of effectiveness in all subgroups qfter receiving the vaccine.
+
+Males vaccinated had 2:1 of contracting covid 19 after being vaccinated, thus it is ineffective for males with a P value of 0.0005801which is too low. This indicates strong evidence against the null hypothesis, so we reject the null hypothesis. In conclusion males should not take the vaccine because it is ineffective at protecting males from covid 19.
+
+Females were 1:2 odds of contracting covid 19 after vaccination,  with a P value of  <2e-16(0.0000000000000002)which is too low. This indicates strong evidence against the null hypothesis, so we reject the null hypothesis. In conclusion woman take the vaccine because it is effective in protecting woman from covid 19.
+
+
+Drugusers had 2:1 of contracting covid 19 after vaccination with a P value of 0.002 which is too low. This indicates strong evidence against the null hypothesis, so we reject the null hypothesis. In conclusion Drugusers should  take the vaccine because it is effective at protecting them from covid 19.
+
+
+LGBTQ,had a 5:3 odds of contracting covid 19.After vaccination with a P value of 0.00006 which is too low. This indicates strong evidence against the null hypothesis, so we reject the null hypothesis. In conclusion LGBTQ should not take the vaccine because it is ineffective at protecting them from covid 19.
+
+To reiterate it is is clear that there is difference in Covid 19 vaccine effectiveness between different subgroups, thus we reject the null hypothesis. The vaccine is effective at fighting Covid 19 for woman and drug users but ineffective for for men and LGBTQ.
