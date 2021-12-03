@@ -136,6 +136,21 @@ In the second plot, the one above, The The left two bars of the graph are all th
 
 The codes that  create this plot start with the code block beginning with dd2. dd2 can be seen in the environment pane and if inspected contains 4 variables.These variables include infected, treatment, count, and prcent(stands for percent). The second group of codes is called the basicC. BasicC can also be seen in the environment pane and appears to contain a list of 9 variables. This information creates the first plot. The basicCC is the last bunch of codes and is also in the files pane. It also contains 9 variables and helps to create the percentage plot, the second plot.
 
+## numerical results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=gal)
+rowPerc(table1)
+colPerc(table1)
+```
+
+
+These numerical results show specific percentages of girls(females) that got covid-19 after taking the placebo and taking the vaccine. 
+Among the gals, 33% got covid-19 after taking the vaccine, while the approximately 67% of girls that were given the placebo contracted covid-19. The vaccine is clearly not effective in preventing covid-19 in girls(females) and it is not recommended. Those who took the placebo were much less likely to contact covid-19
+The odds of getting covid-19  for a woman while taking the vaccine is 1:2. The women that took the drug were half as likely to get covid-19 (33%) than those taking the placebo(67%).
+
+
+
 # Drug Users
 
 # LGBTQ
